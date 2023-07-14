@@ -1,0 +1,29 @@
+**bold**
+
+**bold**
+
+To make a plot, we use the `ggplot()` function.
+
+###### Header 6
+
+# Header 1
+
+## Header 3
+
+Scatter Plot
+
+1.  GitHub
+2.  ![](plot_img/lab3_scatter_rfstimePerSize.png){width="263"}
+
+| Col1 | Col2 | Col3 |
+|------|------|------|
+|      |      |      |
+|      |      |      |
+|      |      |      |
+
+```{r plot echo = F}
+# this is a comment
+library(ggplot2)
+
+ggplot(data=mpg, aes(x=hwy)) + geom_density()
+```
