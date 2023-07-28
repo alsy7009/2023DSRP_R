@@ -154,7 +154,7 @@ summary(lm_fit$fit)
 
 ## logistic regression
 # for logistic regression,
-# 1. filter data into only 2 groups in categorical variable o finterest
+# 1. filter data into only 2 groups in categorical variable of interest
 # 2. make categorical var a factor
 # 3. make your training and testing splits
 

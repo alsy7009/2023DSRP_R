@@ -91,3 +91,22 @@ ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width)) +
 mpg$year <- as.factor(mpg$year)
 
 iris$Species <- factor(iris$Species, levels=c('versicolor','setosa','virginica'))
+
+ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
+  geom_point() +
+  scale_color_manual(values=c('red','purple','pink'),
+                     name='Iris Species') +
+  xlim(0,8) + ylim(0,4.5) +
+  # scale_x_continuous(limits = c(5,7)) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(color='red'))
+
+## geom_text and geom_label
+ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width)) +
+  geom_point() +
+  geom_text(aes(label=Species))
+  # geom_label(aes(label=Species))
+
+# hover effect
+library(plotly)
+ggplotly()
